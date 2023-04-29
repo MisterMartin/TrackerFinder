@@ -13,22 +13,21 @@ from Logger import Logger
 #  PyQt5
 #  pytq5-tools
 # 
-def sigint_handler(x, y):
-    '''Terminate the trackerAx25 thread
+def main():
 
-    Necessary because it is blocked on a read, and
-    so the event loop is not running.
-    '''
-    trackerAx25.terminate()
-    sys.exit(0)
+    trackerAx25 = None
 
-def closeApp()->None:
-    sigint_handler(None, None)
+    def sigint_handler(x, y):
+        '''Terminate the trackerAx25 thread
 
-trackerAX25 = None
+        Necessary because it is blocked on a read, and
+        so the event loop is not running.
+        '''
+        trackerAx25.terminate()
+        sys.exit(0)
 
-if __name__ == "__main__":
-    import sys
+    def closeApp()->None:
+        sigint_handler(None, None)
 
     def parseArgs() -> dict:
         description = '''
@@ -94,3 +93,6 @@ if __name__ == "__main__":
     timer.start(100)
 
     app.exec()
+
+if __name__ == '__main__':
+    main()
