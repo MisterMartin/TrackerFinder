@@ -9,6 +9,8 @@ dependencies = [
    "PyQt5",
    "PySerial"
 ]
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
 authors = [
   { name="MisterMartin", email="mistermartin@users.noreply.github.com" },
 ]
