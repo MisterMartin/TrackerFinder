@@ -27,5 +27,5 @@ optional arguments:
                         Location of the log files (default: /Users/charlie/)
 
 The messages are typically delivered via the KISS APRS link over Bluetooth, from a handheld radio. The operating system serial device name is
-likely to be different than the default values provided here. Use system tools to determine the serial port device name when connected to the
-Bluetooth device.
+likely to be different than the default values provided here. Use 'python -m TrackerFinder.portlist' to display a list of available serial ports.
+```

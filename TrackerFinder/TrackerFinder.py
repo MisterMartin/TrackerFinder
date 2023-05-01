@@ -11,7 +11,7 @@ from Logger import Logger
 #
 # Python modules:
 #  PyQt5
-#  pytq5-tools
+#  pytq5-tools (needed to install designer and pyuic)
 # 
 def main():
 
@@ -39,7 +39,8 @@ def main():
         The messages are typically delivered via the KISS APRS link over Bluetooth,
         from a handheld radio. The operating system serial device name is likely to be
         different than the default values provided here. Use system tools to determine the
-        serial port device name when connected to the Bluetooth device.
+        serial port device name when connected to the Bluetooth device. Use 'python -m TrackerFinder.portlist'
+        to display a list of available serial ports.
         '''
         parser = ArgumentParser(description=description, epilog=epilog,
         formatter_class=ArgumentDefaultsHelpFormatter)
