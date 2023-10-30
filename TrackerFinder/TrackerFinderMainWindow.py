@@ -15,8 +15,8 @@ The .ui file is converted to the super class as follows:
 
 import sys
 from datetime import datetime
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QDesktopWidget, QHBoxLayout, QSizePolicy
-from PyQt5.QtCore import QTimer, QIODevice, pyqtSignal
+from PyQt6.QtWidgets import QMainWindow, QHBoxLayout
+from PyQt6.QtCore import pyqtSignal
 from Ui_TrackerFinderMainWindow import Ui_TrackerFinderMainWindow
 from DigitalClock import DigitalClock
 class TrackerFinderMainWindow(QMainWindow, Ui_TrackerFinderMainWindow):
@@ -35,7 +35,6 @@ class TrackerFinderMainWindow(QMainWindow, Ui_TrackerFinderMainWindow):
         layout = QHBoxLayout()
         self.clockFrame.setLayout(layout)
         layout.addWidget(clock)
-
 
     def aprsMsg(self, msg:dict)->None:
         """Display APRS items in the GUI

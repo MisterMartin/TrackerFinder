@@ -10,7 +10,7 @@ pip install pyqt5 pyqt5-tools pyserial
 
 import sys
 from serial import Serial
-from PyQt5.QtCore import QObject, QTimer, QIODevice, QThread, QFile, pyqtSignal
+from PyQt6.QtCore import QObject, QTimer, QIODevice, QThread, QFile, pyqtSignal
 from datetime import datetime
 
 class TrackerAX25(QThread):

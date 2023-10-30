@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtSerialPort import QSerialPortInfo, QSerialPort
+from PyQt6.QtSerialPort import QSerialPortInfo, QSerialPort
 
 
 if sys.platform == 'win32':

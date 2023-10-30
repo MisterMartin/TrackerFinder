@@ -1,6 +1,6 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QWidget, QVBoxLayout, QSizePolicy
-from PyQt5.QtCore import Qt, QTimer, QTime
+from PyQt6.QtWidgets import QApplication, QLabel, QMainWindow, QWidget, QVBoxLayout, QSizePolicy
+from PyQt6.QtCore import Qt, QTimer, QTime
 
 
 class DigitalClock(QWidget):
@@ -8,7 +8,7 @@ class DigitalClock(QWidget):
         super().__init__(parent)
 
         self.time_label = QLabel(self)
-        self.time_label.setAlignment(Qt.AlignCenter)
+        self.time_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.time_label.setStyleSheet(f"font-size: 20px; font-weight: bold;")
 
         layout = QVBoxLayout()

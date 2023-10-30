@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "TrackerFinder"
-version = "1.0.2"
+version = "1.0.3"
 dependencies = [
-   "PyQt5",
+   "PyQt6",
    "PySerial"
 ]
 requires-python = ">=3.9"

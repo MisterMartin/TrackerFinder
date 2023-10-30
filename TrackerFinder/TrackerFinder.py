@@ -2,8 +2,8 @@ import sys
 import os
 import signal
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtCore import QTimer
+from PyQt6.QtWidgets import QApplication
+from PyQt6.QtCore import QTimer
 from TrackerAX25 import TrackerAX25
 from TrackerFinderMainWindow import TrackerFinderMainWindow
 from Logger import Logger
