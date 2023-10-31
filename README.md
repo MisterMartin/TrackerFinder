@@ -16,7 +16,8 @@ pip3 install git+https://github.com/MisterMartin/TrackerFinder
 python3 -m TrackerFinder -h
 usage: __main__.py [-h] [-d DEVICE] [-l LOCATION]
 
-Capture AX25 messages sent by a LASP VHF tracker. The two Tracker message types, APRS and position encoded pings, are decoded. Raw and decoded
+Capture AX25 messages sent by a LASP VHF tracker. The two Tracker message
+types,APRS and position encoded pings, are decoded. Raw and decoded
 messages are logged to .raw and .log files.
 
 optional arguments:
@@ -26,6 +27,9 @@ optional arguments:
   -l LOCATION, --location LOCATION
                         Location of the log files (default: /Users/charlie/)
 
-The messages are typically delivered via the KISS APRS link over Bluetooth, from a handheld radio. The operating system serial device name is
-likely to be different than the default values provided here. Use 'python -m TrackerFinder.portlist' to display a list of available serial ports.
+The messages are typically delivered via the KISS APRS link over
+Bluetooth, from a handheld radio. The operating system serial
+device name is likely to be different than the default values
+provided here. Use 'python -m TrackerFinder.portlist' to display
+a list of available serial ports.
 ```
