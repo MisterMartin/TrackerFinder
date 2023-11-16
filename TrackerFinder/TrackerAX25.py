@@ -112,7 +112,7 @@ class TrackerAX25(QThread):
         return [elapsed.seconds, currentTime]
             
     def degrees(self, b:bytearray)->float:
-        bigInt = b[0]*65535 + b[1]*255 + b[0]
+        bigInt = b[0]*65536 + b[1]*256 + b[2]
         degrees = bigInt / 93200.0
         return degrees
         
