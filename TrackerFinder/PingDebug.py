@@ -3,7 +3,11 @@ t = TrackerAX25()
 
 # Test the ping decoding from TrackerAX25.py
 
-# A raw file was dumped using od:
+#
+# The APRS location in the log file is:
+# 2023-11-15 00:47:31 APRS 1046_TRK 7740.09S 17019.58E 0 240 258809
+#
+# The raw capture file was dumped using od:
 # od -t u1 2023-11-15-TrackerFinder.raw
 # 0000000   192   0  46   0 110 116  16 242  57 111 192 192   0  46   0 110
 # 0000020   116  16 242  57 111 192 192   0  46   0 110 116  16 242  57 111
@@ -16,7 +20,7 @@ t = TrackerAX25()
 # 0000200    48  57  49  48  52  54  95  84  82  75 192 192   0  46   0 110
 # 0000220   116  16 242  57 111 192 192   0  46   0 110 116  16 242  57 111
 # 0000240   192
-# 
+
 # The first 11 bytes provide one ping message:
 msg = bytearray([192  , 0,  46,   0, 110, 116,  16, 242,  57, 111, 192])
 
@@ -25,6 +29,7 @@ def toDegsMin(decDegs) -> str:
     mins = 60.0*(decDegs - degsInt)
     return(f'{degsInt:d}{mins:02.2f}')
 
+# The Lat, Lon at the end of the output line should match the APRS message.
 print(f'{t.pingId(msg)} {t.pingAge(msg)} {t.pingLat(msg):.4f} {t.pingLon(msg):.4f} {toDegsMin(t.pingLat(msg))} {toDegsMin(t.pingLon(msg))}')
 
 
